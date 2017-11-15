@@ -1,6 +1,6 @@
 {
   "name": "blockauth-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Javascript library for interacting with BlockAuth server",
   "main": "src/index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/blockauth/client/issues"
   },
-  "homepage": "https://github.com/blockauth/client"
+  "homepage": "https://github.com/blockauth/client",
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
 }
