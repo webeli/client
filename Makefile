@@ -7,3 +7,7 @@ push-tag:
 	git pull origin ${BRANCH}
 	git tag ${VERSION}
 	git push origin ${BRANCH} --tags
+
+release:
+	npm run build
+	npm publish

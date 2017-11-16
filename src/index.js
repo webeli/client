@@ -1,4 +1,4 @@
-var axios = require('axios');
+import axios from 'axios';
 
 // Constants used to generate API routes.
 var CHECK_PATH = '/auth/check';
@@ -17,8 +17,8 @@ var checkInvoke = function(serverURI, token, callback) {
     var ok = validateCheckInvokeResponse(response);
     if (ok) {
       callback({
-          token: response.data.token,
-          transactionHash: response.data.transaction_hash,
+        token: response.data.token,
+        transactionHash: response.data.transaction_hash,
       }, false);
     } else {
       callback({}, true);
