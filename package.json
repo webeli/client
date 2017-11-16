@@ -1,6 +1,6 @@
 {
   "name": "blockauth-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript library for interacting with BlockAuth server",
   "main": "dist/index.js",
   "scripts": {
