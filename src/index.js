@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 // Constants used to generate API routes.
-var CHECK_PATH = '/auth/check';
-var CREATE_PATH = '/auth/create';
+const CHECK_PATH = '/auth/check';
+const CREATE_PATH = '/auth/create';
 
 // checkInvoke checks to see if a contract has been satisfied and the
 // login attempt is complete.
-var checkInvoke = function(serverURI, token, callback) {
+const checkInvoke = (serverURI, token, callback) => {
   axios({
     method: 'get',
     url: generateURI(serverURI, CHECK_PATH),
@@ -30,7 +30,7 @@ var checkInvoke = function(serverURI, token, callback) {
 
 // createContract create a new contract so that the user can attempt
 // to login.
-var createContract = function(serverURI, address, callback) {
+const createContract = (serverURI, address, callback) => {
   axios({
     method: 'post',
     url: generateURI(serverURI, CREATE_PATH),
@@ -57,11 +57,11 @@ var createContract = function(serverURI, address, callback) {
   });
 };
 
-function generateURI(serverURI, path) {
+const generateURI = (serverURI, path) => {
   return serverURI + path;
 }
 
-function validateCheckInvokeResponse(response) {
+const validateCheckInvokeResponse = response => {
   if (!response.hasOwnProperty('data')) {
     return false;
   }
@@ -77,7 +77,7 @@ function validateCheckInvokeResponse(response) {
   return true;
 };
 
-function validateCreateContractResponse(response) {
+const validateCreateContractResponse = response => {
   if (!response.hasOwnProperty('data')) {
     return false;
   }
