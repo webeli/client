@@ -26,7 +26,7 @@
 
 ## Setup
 
-Before using the library, please read the [whitepaper](https://github.com/blockauth/documentation/blob/master/WHITEPAPER.md)
+Before using the library, please read the [whitepaper](https://github.com/blockauth/whitepaper)
 and check out the [demo](http://demo.blockauth.cc) to get an understanding of how BlockAuth works.
 
 Then install the library:
